@@ -40,5 +40,5 @@ I’m interested in distributed systems, AI-powered developer tools, observabili
 ## Contact
 
 - Email: sir.belevtsev@gmail.com
-- GitHub: [@sir-belevtsev](https://github.com/sir-belevtsev)
+- GitHub: [@belevtsev](github.com/belevtsev/belevtsev)
 - LinkedIn: [pbelevtsev](https://www.linkedin.com/in/pbelevtsev/)
