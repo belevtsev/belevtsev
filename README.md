@@ -2,11 +2,21 @@
 
 **Staff Software Engineer · Backend & Distributed Systems · Technical Lead**
 
-I'm a software engineer from Ukraine with **14+ years of experience** building products from early prototypes to production platforms. My main focus is **Go, distributed systems, and backend architecture**, with experience across commerce, ERP integrations, IoT, aviation, and productivity software.
+I'm a software engineer from Ukraine with **14+ years of experience** building products from early prototypes to production platforms. My main focus is **Go, distributed systems, and backend architecture**, with experience across AI infrastructure, secure data processing, commerce, ERP integrations, IoT, aviation, and productivity software.
 
-I work across system design, implementation, database performance, and production delivery. I enjoy turning complex business processes into clear APIs and services that keep data consistent, enforce access boundaries, and recover predictably from failures.
+My work spans system design, implementation, database performance, runtime management in customer environments, and production delivery. I enjoy turning complex requirements into clear APIs and services that keep data consistent, enforce access boundaries, and recover predictably from failures.
 
 ## Selected engineering work
+
+### AI infrastructure, secure data processing & observability
+
+I own the architecture and development of a streaming gateway, a customer-site management agent, and telemetry integration for an **AI infrastructure and inline data processing platform**.
+
+- Build a **Go streaming gateway** that normalizes REST requests, forwards data over **QUIC**, and streams processed responses back, with explicit ordering, bounded buffering, backpressure, and cancellation.
+- Develop a **customer-site control agent** that coordinates policy application and runtime configuration, maintains durable workflow state, and recovers interrupted operations after process restarts.
+- Implement **machine identity and certificate lifecycle management**, including enrollment, **mTLS** authentication, renewal, and rotation, while keeping private keys within the customer environment.
+- Integrate and manage **OpenTelemetry Collector** pipelines for metrics and structured logs, covering normalization, persistent export queues, service health reporting, and operational diagnostics.
+- Use benchmarks, load tests, race detection, and integration tests to investigate streaming performance and verify concurrency, connection failures, cancellation, and recovery behavior.
 
 ### Commerce, ERP integrations & agricultural operations
 
@@ -47,10 +57,11 @@ Built real-time services for **sports betting and online gaming**, including liv
 
 | Area | Tools |
 | --- | --- |
-| Backend & APIs | Go, gRPC, GraphQL, REST, Node.js, TypeScript |
+| Backend & APIs | Go, gRPC, Protobuf, GraphQL, REST, Node.js, TypeScript |
 | Data & messaging | PostgreSQL, Redis, NATS JetStream, WebSockets |
+| Networking & security | QUIC, TLS, mTLS, PKI, certificate lifecycle management |
 | Infrastructure & delivery | Docker, Kubernetes, Terraform, Azure, AWS, CI/CD |
-| Observability | OpenTelemetry, Prometheus, Grafana |
+| Observability | OpenTelemetry, OpenTelemetry Collector, OTLP, Prometheus, Grafana, StatsD |
 | Product interfaces | React, React Native |
 
 ## How I work
