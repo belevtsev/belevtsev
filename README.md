@@ -1,73 +1,79 @@
 # Pavlo Belevtsev
 
-**Staff Software Engineer · Backend & Distributed Systems · Technical Lead**
+**Staff / Lead Go Backend &amp; Platform Engineer**
 
-I'm a software engineer from Ukraine with **14+ years of experience** building products from early prototypes to production platforms. My main focus is **Go, distributed systems, and backend architecture**, with experience across AI infrastructure, secure data processing, commerce, ERP integrations, IoT, aviation, and productivity software.
+I build Go backends for complex business domains, with faster data access and dependable operations.
 
-My work spans system design, implementation, database performance, runtime management in customer environments, and production delivery. I enjoy turning complex requirements into clear APIs and services that keep data consistent, enforce access boundaries, and recover predictably from failures.
+[Website](<https://belevtsev.github.io/>) · [LinkedIn](<https://linkedin.com/in/pbelevtsev>) · [GitHub](<https://github.com/belevtsev>) · [pavlo.belevtsev@gmail.com](<mailto:pavlo.belevtsev@gmail.com>)
 
-## Selected engineering work
+## Selected work
 
-### AI infrastructure, secure data processing & observability
+### Commerce &amp; ERP
 
-I own the architecture and development of a streaming gateway, a customer-site management agent, and telemetry integration for an **AI infrastructure and inline data processing platform**.
+Led backend architecture for multi-tenant commerce and enterprise resource planning (ERP) services, covering catalogs and orders, invoices, and ERP integration.
 
-- Build a **Go streaming gateway** that normalizes REST requests, forwards data over **QUIC**, and streams processed responses back, with explicit ordering, bounded buffering, backpressure, and cancellation.
-- Develop a **customer-site control agent** that coordinates policy application and runtime configuration, maintains durable workflow state, and recovers interrupted operations after process restarts.
-- Implement **machine identity and certificate lifecycle management**, including enrollment, **mTLS** authentication, renewal, and rotation, while keeping private keys within the customer environment.
-- Integrate and manage **OpenTelemetry Collector** pipelines for metrics and structured logs, covering normalization, persistent export queues, service health reporting, and operational diagnostics.
-- Use benchmarks, load tests, race detection, and integration tests to investigate streaming performance and verify concurrency, connection failures, cancellation, and recovery behavior.
+- Built a secure on-premises connector agent using gRPC streaming to synchronize real-time data between customer ERP systems and the cloud platform, reducing data sync latency from hours to minutes.
+- Delivered high write throughput through asynchronous ingestion and queued writes using NATS JetStream.
+- Built denormalized read models on authoritative normalized source data, maintaining consistency through transactional or asynchronous updates across projects.
+- sub-second search across catalogs with 500K+ product records
+- Reduced API response times by 35% through Redis caching and PostgreSQL optimization.
+- Improved full-text search performance by 70% through query-plan analysis and index tuning.
 
-### Commerce, ERP integrations & agricultural operations
+### Agriculture
 
-- Led backend architecture for a multi-tenant SaaS platform, using **Go, NATS JetStream, gRPC, and GraphQL** to connect business services and external systems.
-- Built integrations for product catalogs, customers, pricing, orders, invoices, inventory, and documents, including a secure on-premises connector that brought ERP synchronization from **hours to minutes**.
-- Reduced API response times by **35%** with Redis caching and PostgreSQL optimization. Improved full-text search performance by **70%** through query-plan analysis and index tuning, enabling sub-second search across **500K+ product records**.
-- Developed backend workflows for farmers and consultants covering sampling, laboratory results, feed recommendations, private document exchange, and scheduled reminders, with role-based access and explicit workflow transitions.
+Built farmer and consultant workflows for lab results, feed recommendations, and private document exchange. Used on-premises agents and gRPC streaming to connect customer-site systems.
 
-### IoT, predictive maintenance & smart facilities
+### AI Infrastructure
 
-- Designed telemetry ingestion pipelines and backend services for real-time monitoring of **10,000+ facility assets**.
-- Worked with data scientists to integrate predictive models into maintenance workflows, helping reduce unplanned equipment downtime by **30%**.
-- Built services for occupancy and environmental monitoring, processing **1M+ sensor readings per day** and exposing data through REST and gRPC APIs.
-- Implemented identity, access management, and tenant isolation for enterprise workspace platforms, and mentored engineers through reviews, pairing, and technical guidance.
+Built Go gateway and runtime control components for a data processing platform.
 
-### Aviation & airspace compliance
+- Used gRPC streaming for on-premises environments and QUIC transport, with ordered streams, backpressure, and cancellation.
+- Implemented machine identity and certificate lifecycle management using mTLS and PKI, including enrollment, renewal, and rotation.
+- Built customer-site agents with runtime configuration and recovery.
+- Integrated OpenTelemetry Collector for metrics and logs.
 
-- Built flight-plan submission and authorization workflows with automated airspace checks and integrations with aviation authority systems, supporting **500+ daily flight plans**.
-- Implemented live telemetry, flight tracking, and airspace updates using WebSockets and event-driven services, enabling monitoring of **100+ concurrent drone operations**.
+### IoT &amp; Telemetry
 
-### Productivity SaaS & product delivery
+Designed an event-driven microservices platform using NATS JetStream and gRPC supporting 10,000+ concurrent asset connections.
 
-- Took a multi-tenant task-management product from concept to production in **8 months**, owning architecture, implementation, infrastructure, testing, and release workflows.
-- Built authentication, role-based permissions, tenant isolation, task workflows, and operational analytics using **Go, PostgreSQL, and React**.
-- Established automated testing and container-based delivery pipelines, reducing deployment time from **2 hours to 15 minutes**.
+- Designed sensor-data ingestion pipelines for real-time occupancy and environmental monitoring, processing 1M+ data points daily from temperature, motion, and presence sensors.
 
-### AI-assisted engineering & developer tooling
+### Aviation &amp; Airspace
 
-- Build and maintain a **Go-based workflow manager** for installing, updating, validating, and rolling back reusable agent skills and configuration on macOS and Linux.
-- Develop workflows for bounded multi-agent collaboration, source-bound handoffs, independent test authorship, and code review.
-- Use AI tools for implementation, investigation, and review, with explicit requirements, verification, and human ownership of engineering decisions.
+Built real-time flight authorization and airspace compliance systems processing 500+ daily flight plans with automated regulatory checks and live monitoring of 100+ concurrent drone operations.
 
-### Earlier product experience
+### Productivity SaaS
 
-Built real-time services for **sports betting and online gaming**, including live data feeds, provider aggregation, WebSockets, and video streaming. Developed data-collection and reporting services for **energy consumption management**. Co-founded and built a **restaurant reservation product**, taking it from the initial idea through launch.
+Delivered a multi-tenant task-management product from concept to production in 8 months, owning architecture, backend implementation, and delivery.
+
+- Designed and implemented the full platform stack including JWT-based authentication, role-based access control (RBAC), tenant isolation, and task management workflows using Go, PostgreSQL, and React.
+- Built analytics dashboards linking operational activity to company-level KPIs.
+- Established CI/CD pipelines, automated testing frameworks, and deployment workflows using Docker and Kubernetes, reducing deployment time from 2 hours to 15 minutes.
+
+### Location-based Social
+
+Built Go services for location-based social discovery, profiles, and user-generated content.
+
+- Exposed federated GraphQL and gRPC APIs across service boundaries.
+- Implemented PostGIS search for privacy-aware nearby activity.
+- Built media uploads, image variants, and asynchronous object cleanup using S3.
+
+## Open source
+
+[agent-workflows](<https://github.com/belevtsev/agent-workflows>)
+
+Built agent-workflows, a Go-based manager for reusable engineering skills and agent configuration on macOS and Linux.
+
+Implemented installation, validation, updates, and rollback for a consistent AI-assisted engineering workflow.
+
+## Engineering approach
+
+I take ownership of services, components, and features, from design and delivery to production operations, including investigating failures and seeing fixes through.
+
+I've worked in teams with strict review and approval processes and in startups where priorities change quickly and time to market comes first.
+
+I use AI-assisted development and review tools, including Claude and Codex, while retaining ownership of engineering decisions and verification.
 
 ## Technologies
 
-| Area | Tools |
-| --- | --- |
-| Backend & APIs | Go, gRPC, Protobuf, GraphQL, REST, Node.js, TypeScript |
-| Data & messaging | PostgreSQL, Redis, NATS JetStream, WebSockets |
-| Networking & security | QUIC, TLS, mTLS, PKI, certificate lifecycle management |
-| Infrastructure & delivery | Docker, Kubernetes, Terraform, Azure, AWS, CI/CD |
-| Observability | OpenTelemetry, OpenTelemetry Collector, OTLP, Prometheus, Grafana, StatsD |
-| Product interfaces | React, React Native |
-
-## How I work
-
-I combine hands-on engineering with architecture, technical planning, and mentoring. I prefer clear service ownership, explicit API contracts, and straightforward designs. I pay close attention to authorization, database consistency, retries, and the operational work required to keep a feature reliable after release.
-
-## Contact
-
-[Email](mailto:sir.belevtsev@gmail.com) · [LinkedIn](https://www.linkedin.com/in/pbelevtsev/)
+Go (Golang) · AI-Augmented Development (Claude, Codex, Multi-Agent Orchestration, LLM-Assisted Code Review, Prompt Engineering) · TypeScript · Node.js · PostgreSQL · PostGIS · S3 · Redis · NATS JetStream · gRPC · Protobuf · QUIC · mTLS · PKI · OpenTelemetry · Prometheus · WebSockets · GraphQL · REST APIs · Microservices · Event-Driven Architecture · Docker · Kubernetes · Terraform · CI/CD · AWS · Azure · React · React Native · Agile/Scrum · System Design · Technical Leadership
