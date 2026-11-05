@@ -1,6 +1,6 @@
 # Pavlo Belevtsev
 
-**Staff / Lead Go Backend &amp; Platform Engineer**
+**Lead Go Backend &amp; Platform Engineer**
 
 I build Go backends for complex business domains, with faster data access and dependable operations.
 
