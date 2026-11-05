@@ -14,20 +14,20 @@ Led backend architecture for multi-tenant commerce and enterprise resource plann
 
 - Built a secure on-premises connector agent using gRPC streaming to synchronize real-time data between customer ERP systems and the cloud platform, reducing data sync latency from hours to minutes.
 - Delivered high write throughput through asynchronous ingestion and queued writes using NATS JetStream.
-- Built denormalized read models on authoritative normalized source data, maintaining consistency through transactional or asynchronous updates across projects.
+- Built denormalized read models on authoritative normalized source data, maintaining consistency through transactional or asynchronous updates.
 - sub-second search across catalogs with 500K+ product records
 - Reduced API response times by 35% through Redis caching and PostgreSQL optimization.
 - Improved full-text search performance by 70% through query-plan analysis and index tuning.
 
 ### Agriculture
 
-Built farmer and consultant workflows for lab results, feed recommendations, and private document exchange. Used on-premises agents and gRPC streaming to connect customer-site systems.
+Built farmer and consultant workflows for lab results, feed recommendations, and private document exchange.
 
 ### AI Infrastructure
 
 Built Go gateway and runtime control components for a data processing platform.
 
-- Used gRPC streaming for on-premises environments and QUIC transport, with ordered streams, backpressure, and cancellation.
+- Implemented gRPC streaming and QUIC transport for on-premises deployments, with ordered streams, backpressure, and cancellation.
 - Implemented machine identity and certificate lifecycle management using mTLS and PKI, including enrollment, renewal, and rotation.
 - Built customer-site agents with runtime configuration and recovery.
 - Integrated OpenTelemetry Collector for metrics and logs.
@@ -70,7 +70,7 @@ Implemented installation, validation, updates, and rollback for a consistent AI-
 
 I take ownership of services, components, and features, from design and delivery to production operations, including investigating failures and seeing fixes through.
 
-I've worked in teams with strict review and approval processes and in startups where priorities change quickly and time to market comes first.
+I've worked in enterprise teams with strict review and approval processes and in startups, including my own, where priorities change quickly and time to market comes first.
 
 I use AI-assisted development and review tools, including Claude and Codex, while retaining ownership of engineering decisions and verification.
 
